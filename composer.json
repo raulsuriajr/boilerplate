@@ -16,9 +16,16 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/backup_migrate": "^5.0",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/editor_advanced_link": "^2.0",
+        "drupal/image_effects": "^3.1",
+        "drupal/pathauto": "^1.8",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.1",
         "drush/drush": "^10.6"
     },
     "conflict": {
