@@ -1,15 +1,15 @@
-### Installation
+## Installation
 * `./setup.sh` to run setup.
 * Install like normal
 
-### Features
+## Features
 Drupal version 9
 
 Compatible with composer 2 only
 
 `./vendor/bind/drush` to use drush
 
-### Modules
+## Modules
 * Back up and migrate
 * Adminimal Admin Toolbar
 * Pathauto
@@ -19,3 +19,4 @@ Compatible with composer 2 only
 * Image effects
 
 To enable these modules run `./setup.sh enmod`
+**(NOTE: You must install drupal first before running this command)**
