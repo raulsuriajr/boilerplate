@@ -21,4 +21,6 @@ else
   fi
 
   cp sites/default/default.services.yml sites/default/services.yml
+
+  rm -rf .git
 fi
