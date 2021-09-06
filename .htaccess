@@ -177,6 +177,30 @@ AddEncoding gzip svgz
 <IfModule mod_headers.c>
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
+
+  # X XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+
+  # Allows a site to control how much information the browser includes with navigations away from a document and should be set by all sites.
+  Header set Referrer-Policy "no-referrer"
+
+  # Protect the site from XSS attacks
+  Header set Content-Security-Policy "frame-ancestors 'self'"
+
+  # Instruct browsers to only use HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Allows the site to control which features and APIs can be used in the browser
+  # Allowlist https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+  Header always set Permissions-Policy "geolocation=(),microphone=(),camera=(),fullscreen=(self)"
+
+  # Prevents the site to be rendered in a <frame>, <iframe>, <embed> or <object> html elements
+  # Avoids Clickjacking
+  Header always set X-Frame-Options "DENY"
+
+  # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto
+  RequestHeader set X-HTTPS 1
+
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
