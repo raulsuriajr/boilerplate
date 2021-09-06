@@ -6,8 +6,10 @@ cp example.gitignore .gitignore
 
 mkdir tmp && chmod -R a+w tmp
 
-mkdir -p sites/default/files/private && chmod -R a+w sites/default/files/private
-chmod -R a+w sites/default/files
+if [ ! -f "sites/default/files/private" ]; then
+  mkdir -p sites/default/files/private && chmod -R a+w sites/default/files/private
+  chmod -R a+w sites/default/files
+fi
 
 SETTINGS_PHP="sites/default/settings.php"
 if [ ! -f $SETTINGS_PHP ]; then
