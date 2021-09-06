@@ -33,7 +33,8 @@
         "drupal-scaffold": {
             "file-mapping": {
                 "[web-root]/README.md": false,
-                "[web-root]/example.gitignore": false
+                "[web-root]/example.gitignore": false,
+                "[web-root]/sites/default/default.settings.php": false
             }
         },
         "installer-paths": {
