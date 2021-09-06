@@ -1,5 +1,6 @@
-### Setup
-`./setup.sh` to run setup.
+### Installation
+* `./setup.sh` to run setup.
+* Install like normal
 
 ### Features
 Drupal version 9
@@ -16,3 +17,5 @@ Compatible with composer 2 only
 * Twig Field Value
 * Editor Advanced Link
 * Image effects
+
+To enable these modules run `./setup.sh enmod`
