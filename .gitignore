@@ -53,3 +53,5 @@ sites/simpletest
 /php.ini
 
 .idea
+
+node_modules
