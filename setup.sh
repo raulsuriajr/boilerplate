@@ -8,7 +8,7 @@ if [ ! -f $GITIGNORE ]; then
 fi
 PRIVATE_FILE="sites/default/files/private"
 if [ ! -d $PRIVATE_FILE ]; then
-  mkdir -p $$PRIVATE_FILE && chmod -R a+w $PRIVATE_FILE
+  mkdir -p sites/default/files/private && chmod -R a+w sites/default/files/private
   chmod -R a+w sites/default/files
 fi
 SETTINGS_PHP="sites/default/settings.php"
