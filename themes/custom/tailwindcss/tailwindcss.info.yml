@@ -1,0 +1,12 @@
+name: TailwindCss
+type: theme
+description: 'A Test of Tailwindcss'
+base theme: 'claro'
+core_version_requirement: 9.x
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+libraries:
+  - tailwindscss/global-styling
+  - tailwindscss/global-script

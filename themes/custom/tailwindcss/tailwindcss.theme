@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Testing (Practice)
+ * Attachments Page alter
+ */
+function tailwindcss_page_attachments_alter(&$variables) {
+  $variables['#attached']['drupalSettings']['testKey']['key'] = 'value';
+}
