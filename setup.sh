@@ -1,18 +1,21 @@
 #!/bin/sh
 mkdir tmp && chmod -R a+w tmp
 composer -V && composer install
-if [ ! -f ".gitignore" ]; then
-  cp example.gitignore .gitignore
-elif [ ! -f "sites/default/files/private" ]; then
-  mkdir -p sites/default/files/private && chmod -R a+w sites/default/files/private
+GITIGNORE=".gitignore"
+if [ ! -f $GITIGNORE ]; then
+  cp example.gitignore $GITIGNORE
+fi
+PRIVATE_FILE="sites/default/files/private"
+if [ ! -d $PRIVATE_FILE ]; then
+  mkdir -p $$PRIVATE_FILE && chmod -R a+w $PRIVATE_FILE
   chmod -R a+w sites/default/files
-elif [ ! -f "sites/default/settings.php" ]; then
-  SETTINGS_PHP="sites/default/settings.php"
+fi
+SETTINGS_PHP="sites/default/settings.php"
+if [ ! -f $SETTINGS_PHP ]; then
   cp sites/default/default.settings.php sites/default/settings.php && chmod -R a+w $SETTINGS_PHP
   echo "${SETTINGS_PHP} has been created and granted write access"
-elif [ ! -f "sites/default/services.yml" ]; then
-  cp sites/default/default.services.yml sites/default/services.yml
-else
-  echo "setup complete!"
 fi
-
+SERVICES_YML="sites/default/services.yml"
+if [ ! -f $SERVICES_YML ]; then
+  cp sites/default/default.services.yml $SERVICES_YML
+fi
