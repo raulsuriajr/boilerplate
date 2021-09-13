@@ -1,4 +1,5 @@
 #!/bin/sh
+git clone https://github.com/drush-ops/drush.git
 mkdir tmp && chmod -R a+w tmp
 composer -V && composer install
 GITIGNORE=".gitignore"
