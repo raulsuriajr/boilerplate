@@ -53,5 +53,6 @@ sites/simpletest
 /php.ini
 
 .idea
+.ddev
 
 node_modules
